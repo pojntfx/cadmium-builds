@@ -16,6 +16,36 @@ jobs:
             flags: -e '--privileged -v /dev:/dev'
             cmd: lazor
             dst: cadmium-lazor.img.gz
+          - id: duet
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: duet
+            dst: cadmium-duet.img.gz
+          - id: kevin
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: kevin
+            dst: cadmium-kevin.img.gz
+          - id: bob
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: bob
+            dst: cadmium-bob.img.gz
+          - id: minnie
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: minnie
+            dst: cadmium-minnie.img.gz
+          - id: speedy
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: speedy
+            dst: cadmium-speedy.img.gz
 
     steps:
       - name: Checkout
