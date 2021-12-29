@@ -3,6 +3,8 @@ name: hydrun CI
 on:
   push:
   pull_request:
+  schedule:
+    - cron: "0 0 * * 0"
 
 jobs:
   build-linux:
@@ -34,18 +36,31 @@ jobs:
             flags: -e '--privileged -v /dev:/dev'
             cmd: bob
             dst: Cadmium/cadmium-bob.img.gz
-          - id: minnie
+          # Minnie and Speedy don't build as of 2021-12-30
+          # - id: minnie
+          #   src: .
+          #   os: debian:bullseye
+          #   flags: -e '--privileged -v /dev:/dev'
+          #   cmd: minnie
+          #   dst: Cadmium/cadmium-minnie.img.gz
+          # - id: speedy
+          #   src: .
+          #   os: debian:bullseye
+          #   flags: -e '--privileged -v /dev:/dev'
+          #   cmd: speedy
+          #   dst: Cadmium/cadmium-speedy.img.gz
+          - id: homestar
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
-            cmd: minnie
-            dst: Cadmium/cadmium-minnie.img.gz
-          - id: speedy
+            cmd: homestar
+            dst: Cadmium/cadmium-homestar.img.gz
+          - id: coachz
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
-            cmd: speedy
-            dst: Cadmium/cadmium-speedy.img.gz
+            cmd: coachz
+            dst: Cadmium/cadmium-coachz.img.gz
 
     steps:
       - name: Checkout
