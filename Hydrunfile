@@ -5,7 +5,7 @@ set -e
 echo 'deb-src http://deb.debian.org/debian bullseye main' >>/etc/apt/sources.list
 apt update
 apt build-dep -y linux
-apt install -y libarchive-tools curl wget f2fs-tools cgpt vboot-utils libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf qemu-user-static gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu parted udev git debootstrap u-boot-tools qemu-user lz4
+apt install -y libarchive-tools curl wget cgpt vboot-utils libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf qemu-user-static gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu parted udev git debootstrap u-boot-tools qemu-user lz4
 
 # Get upstream
 git clone https://github.com/Maccraft123/Cadmium.git
@@ -14,5 +14,8 @@ cd Cadmium
 # Build
 export CADMIUMROOT="${PWD}"
 export RELEASE="$1"
-./build-all "cadmium-${RELEASE}.img" 2G || true
-gzip -f "cadmium-${RELEASE}.img"
+export DISTRO="$2"
+sed -i config -e "s/arch/${DISTRO}/g"
+sed -i config -e 's/f2fs/ext4/g'
+./build-all "cadmium-${RELEASE}-${DISTRO}.img" 2G || true
+gzip -f "cadmium-${RELEASE}-${DISTRO}.img"
