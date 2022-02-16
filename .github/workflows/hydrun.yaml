@@ -72,6 +72,9 @@ jobs:
         run: |
           curl -L -o /tmp/hydrun "https://github.com/pojntfx/hydrun/releases/latest/download/hydrun.linux-$(uname -m)"
           sudo install /tmp/hydrun /usr/local/bin
+      - name: Add f2fs support
+        run: |
+          sudo modprobe f2fs
       - name: Build with hydrun
         working-directory: ${{ matrix.target.src }}
         run: hydrun -o ${{ matrix.target.os }} ${{ matrix.target.flags }} "./Hydrunfile ${{ matrix.target.cmd }}"
