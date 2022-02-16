@@ -12,55 +12,54 @@ jobs:
     strategy:
       matrix:
         target:
-          - id: lazor
-            src: .
-            os: debian:bullseye
-            flags: -e '--privileged -v /dev:/dev'
-            cmd: lazor
-            dst: Cadmium/cadmium-lazor.img.gz
-          - id: duet
-            src: .
-            os: debian:bullseye
-            flags: -e '--privileged -v /dev:/dev'
-            cmd: duet
-            dst: Cadmium/cadmium-duet.img.gz
-          - id: kevin
-            src: .
-            os: debian:bullseye
-            flags: -e '--privileged -v /dev:/dev'
-            cmd: kevin
-            dst: Cadmium/cadmium-kevin.img.gz
           - id: bob
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
             cmd: bob
             dst: Cadmium/cadmium-bob.img.gz
-          # Minnie and Speedy don't build as of 2021-12-30
-          # - id: minnie
-          #   src: .
-          #   os: debian:bullseye
-          #   flags: -e '--privileged -v /dev:/dev'
-          #   cmd: minnie
-          #   dst: Cadmium/cadmium-minnie.img.gz
-          # - id: speedy
-          #   src: .
-          #   os: debian:bullseye
-          #   flags: -e '--privileged -v /dev:/dev'
-          #   cmd: speedy
-          #   dst: Cadmium/cadmium-speedy.img.gz
-          - id: homestar
-            src: .
-            os: debian:bullseye
-            flags: -e '--privileged -v /dev:/dev'
-            cmd: homestar
-            dst: Cadmium/cadmium-homestar.img.gz
           - id: coachz
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
             cmd: coachz
             dst: Cadmium/cadmium-coachz.img.gz
+          - id: krane
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: krane
+            dst: Cadmium/cadmium-krane.img.gz
+          - id: kevin
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: kevin
+            dst: Cadmium/cadmium-kevin.img.gz
+          - id: minnie
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: minnie
+            dst: Cadmium/cadmium-minnie.img.gz
+          - id: speedy
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: speedy
+            dst: Cadmium/cadmium-speedy.img.gz
+          - id: lazor
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: lazor
+            dst: Cadmium/cadmium-lazor.img.gz
+          - id: 8101b
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: 8101b
+            dst: Cadmium/cadmium-8101b.img.gz
 
     steps:
       - name: Checkout
