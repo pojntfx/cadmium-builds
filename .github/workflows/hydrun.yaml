@@ -12,54 +12,246 @@ jobs:
     strategy:
       matrix:
         target:
-          - id: bob
+          - id: bob-debian
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
-            cmd: bob
-            dst: Cadmium/cadmium-bob.img.gz
-          - id: coachz
+            cmd: bob debian
+            dst: Cadmium/cadmium-bob-debian.img.gz
+          - id: coachz-debian
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
-            cmd: coachz
-            dst: Cadmium/cadmium-coachz.img.gz
-          - id: krane
+            cmd: coachz debian
+            dst: Cadmium/cadmium-coachz-debian.img.gz
+          - id: krane-debian
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
-            cmd: krane
-            dst: Cadmium/cadmium-krane.img.gz
-          - id: kevin
+            cmd: krane debian
+            dst: Cadmium/cadmium-krane-debian.img.gz
+          - id: kevin-debian
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
-            cmd: kevin
-            dst: Cadmium/cadmium-kevin.img.gz
-          - id: minnie
+            cmd: kevin debian
+            dst: Cadmium/cadmium-kevin-debian.img.gz
+          - id: minnie-debian
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
-            cmd: minnie
-            dst: Cadmium/cadmium-minnie.img.gz
-          - id: speedy
+            cmd: minnie debian
+            dst: Cadmium/cadmium-minnie-debian.img.gz
+          - id: speedy-debian
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
-            cmd: speedy
-            dst: Cadmium/cadmium-speedy.img.gz
-          - id: lazor
+            cmd: speedy debian
+            dst: Cadmium/cadmium-speedy-debian.img.gz
+          - id: lazor-debian
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
-            cmd: lazor
-            dst: Cadmium/cadmium-lazor.img.gz
-          - id: 8101b
+            cmd: lazor debian
+            dst: Cadmium/cadmium-lazor-debian.img.gz
+          - id: 8101b-debian
             src: .
             os: debian:bullseye
             flags: -e '--privileged -v /dev:/dev'
-            cmd: 8101b
-            dst: Cadmium/cadmium-8101b.img.gz
+            cmd: 8101b debian
+            dst: Cadmium/cadmium-8101b-debian.img.gz
+          - id: bob-arch
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: bob arch
+            dst: Cadmium/cadmium-bob-arch.img.gz
+          - id: coachz-arch
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: coachz arch
+            dst: Cadmium/cadmium-coachz-arch.img.gz
+          - id: krane-arch
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: krane arch
+            dst: Cadmium/cadmium-krane-arch.img.gz
+          - id: kevin-arch
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: kevin arch
+            dst: Cadmium/cadmium-kevin-arch.img.gz
+          - id: minnie-arch
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: minnie arch
+            dst: Cadmium/cadmium-minnie-arch.img.gz
+          - id: speedy-arch
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: speedy arch
+            dst: Cadmium/cadmium-speedy-arch.img.gz
+          - id: lazor-arch
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: lazor arch
+            dst: Cadmium/cadmium-lazor-arch.img.gz
+          - id: 8101b-arch
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: 8101b arch
+            dst: Cadmium/cadmium-8101b-arch.img.gz
+          - id: bob-void
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: bob void
+            dst: Cadmium/cadmium-bob-void.img.gz
+          - id: coachz-void
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: coachz void
+            dst: Cadmium/cadmium-coachz-void.img.gz
+          - id: krane-void
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: krane void
+            dst: Cadmium/cadmium-krane-void.img.gz
+          - id: kevin-void
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: kevin void
+            dst: Cadmium/cadmium-kevin-void.img.gz
+          - id: minnie-void
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: minnie void
+            dst: Cadmium/cadmium-minnie-void.img.gz
+          - id: speedy-void
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: speedy void
+            dst: Cadmium/cadmium-speedy-void.img.gz
+          - id: lazor-void
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: lazor void
+            dst: Cadmium/cadmium-lazor-void.img.gz
+          - id: 8101b-void
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: 8101b void
+            dst: Cadmium/cadmium-8101b-void.img.gz
+          - id: bob-void-musl
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: bob void-musl
+            dst: Cadmium/cadmium-bob-void-musl.img.gz
+          - id: coachz-void-musl
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: coachz void-musl
+            dst: Cadmium/cadmium-coachz-void-musl.img.gz
+          - id: krane-void-musl
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: krane void-musl
+            dst: Cadmium/cadmium-krane-void-musl.img.gz
+          - id: kevin-void-musl
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: kevin void-musl
+            dst: Cadmium/cadmium-kevin-void-musl.img.gz
+          - id: minnie-void-musl
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: minnie void-musl
+            dst: Cadmium/cadmium-minnie-void-musl.img.gz
+          - id: speedy-void-musl
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: speedy void-musl
+            dst: Cadmium/cadmium-speedy-void-musl.img.gz
+          - id: lazor-void-musl
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: lazor void-musl
+            dst: Cadmium/cadmium-lazor-void-musl.img.gz
+          - id: 8101b-void-musl
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: 8101b void-musl
+            dst: Cadmium/cadmium-8101b-void-musl.img.gz
+          - id: bob-ubuntu
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: bob ubuntu
+            dst: Cadmium/cadmium-bob-ubuntu.img.gz
+          - id: coachz-ubuntu
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: coachz ubuntu
+            dst: Cadmium/cadmium-coachz-ubuntu.img.gz
+          - id: krane-ubuntu
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: krane ubuntu
+            dst: Cadmium/cadmium-krane-ubuntu.img.gz
+          - id: kevin-ubuntu
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: kevin ubuntu
+            dst: Cadmium/cadmium-kevin-ubuntu.img.gz
+          - id: minnie-ubuntu
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: minnie ubuntu
+            dst: Cadmium/cadmium-minnie-ubuntu.img.gz
+          - id: speedy-ubuntu
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: speedy ubuntu
+            dst: Cadmium/cadmium-speedy-ubuntu.img.gz
+          - id: lazor-ubuntu
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: lazor ubuntu
+            dst: Cadmium/cadmium-lazor-ubuntu.img.gz
+          - id: 8101b-ubuntu
+            src: .
+            os: debian:bullseye
+            flags: -e '--privileged -v /dev:/dev'
+            cmd: 8101b ubuntu
+            dst: Cadmium/cadmium-8101b-ubuntu.img.gz
 
     steps:
       - name: Checkout
@@ -72,11 +264,6 @@ jobs:
         run: |
           curl -L -o /tmp/hydrun "https://github.com/pojntfx/hydrun/releases/latest/download/hydrun.linux-$(uname -m)"
           sudo install /tmp/hydrun /usr/local/bin
-      - name: Add f2fs support
-        run: |
-          sudo apt update
-          sudo apt install -y f2fs-tools
-          sudo modprobe f2fs
       - name: Build with hydrun
         working-directory: ${{ matrix.target.src }}
         run: hydrun -o ${{ matrix.target.os }} ${{ matrix.target.flags }} "./Hydrunfile ${{ matrix.target.cmd }}"
