@@ -74,6 +74,8 @@ jobs:
           sudo install /tmp/hydrun /usr/local/bin
       - name: Add f2fs support
         run: |
+          sudo apt update
+          sudo apt install -y f2fs-tools
           sudo modprobe f2fs
       - name: Build with hydrun
         working-directory: ${{ matrix.target.src }}
